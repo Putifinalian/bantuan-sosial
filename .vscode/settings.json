@@ -1,0 +1,11 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "phpsab.snifferEnable": false,
+    "phpsab.fixerEnable": true,
+    "phpsab.standard": "PSR2",
+    "[php]": {
+		"breadcrumbs.showConstructors": true,
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+		// "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+	},
+}

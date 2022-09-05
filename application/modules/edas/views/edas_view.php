@@ -7,7 +7,8 @@
 		<div class="form-group text-right">
 		</div>
 		<?=$this->session->flashdata('notif')?>
-		<table class="table table-hover">
+		<h5>Perhitungan EDAS tidak bisa dilakukan tanpa memilih algoritma, silahkan kembali ke <a href="<?php echo base_url('alternatif');?>">Data Calon Penerima</a> </h5>
+		<!-- <table class="table table-hover">
             <thead>
                 <tr class="thead-dark">
 					<th>No.</th>
@@ -25,6 +26,6 @@
             <tbody>
 				
             </tbody>
-        </table>
+        </table> -->
     </div>
 </div>

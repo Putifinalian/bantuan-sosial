@@ -19,7 +19,7 @@ for ($index = 1; $index <= 9; $index++) {
             </tr>
             <tr class="main-head">
                 <?php foreach ($asi_key as $key => $ak) : ?>
-                    <th class="text-center table-dark" <?= str_starts_with($ak, "0.") ? 'data-orderable="false"' : "" ?>  >
+                    <th class="text-center table-dark" <?= substr($ak, 0, strlen("0.")) === "0." ? 'data-orderable="false"' : "" ?>  >
                         <?= $ak ?>
                     </th>
                 <?php endforeach ?>

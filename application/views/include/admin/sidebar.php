@@ -70,18 +70,19 @@
                 </a>
             </li>
 
-            <li class="<?php echo $this->uri->segment(1)=="ahp"?"active":"";?> has-sub">
+            <!-- <li class="<?php echo $this->uri->segment(1)=="ahp"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('ahp');?>">
                     <i class="fa fa-calculator" aria-hidden="true"></i> 
                     <span>Hitung AHP</span>
                 </a>
-            </li>
-            <li class="<?php echo $this->uri->segment(1)=="ahp_bobot"?"active":"";?> has-sub">
+            </li> -->
+
+            <!-- <li class="<?php echo $this->uri->segment(1)=="ahp_bobot"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('ahp_bobot');?>">
                     <i class="fa fa-check-square" aria-hidden="true"></i> 
                     <span>Memeriksa Konsistensi Hierarki</span>
                 </a>
-            </li>
+            </li> -->
 
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
         </ul>

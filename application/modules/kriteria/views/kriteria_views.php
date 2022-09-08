@@ -102,30 +102,6 @@ function dom_kriteria($val, $bobot_matriks)
                                 </select>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label class="control-label text-capitalize">bansos</label>
-                            <div class="">
-                                <!-- <input type="text" class="form-control" name="tipe_kriteria" placeholder="Masukkan Tipe Kriteria "> -->
-                                <select class="form-control" name="id_bansos">
-                                    <?php foreach ($bansoss as $bansos) : ?>
-                                        <option value="<?= $bansos->id_bansos ?>"><?= $bansos->nama_bansos ?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label text-capitalize">kategori bansos</label>
-                            <div class="">
-                                <select class="form-control" name="id_kategori_bansos">
-                                    <?php foreach ($kategori_bansoss as $kategori_bansos) : ?>
-                                        <option value="<?= $kategori_bansos->id_kategori_bansos ?>"><?= $kategori_bansos->nama_kategori_bansos ?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                        </div>
-
-
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-success" type="submit"> Simpan&nbsp;</button>

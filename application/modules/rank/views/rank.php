@@ -17,9 +17,9 @@
         <table class="table table-hover table-bordered cell-border" id="table_penerima" class="display" style="width:100%">
             <thead>
                 <tr>
-                    <th scope="col">Nomor</th>
-                    <th scope="col">Nama</th>
+                    <th scope="col">No</th>
                     <th scope="col">ID</th>
+                    <th scope="col">Nama</th>
                     <th scope="col">Bansos</th>
                     <th scope="col">Kategori Bansos</th>
                     <th scope="col">Kriteria</th>

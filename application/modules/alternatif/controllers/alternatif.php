@@ -58,7 +58,8 @@ class Alternatif extends CI_Controller
         // return $this->json($result);
 
         $this->session->set_flashdata('notif', "<div class='alert alert-success' role='alert'> Data $nama_calon_penerima Berhasil diupdate <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
-        redirect("alternatif/edit/$id_calon_penerima");
+        // redirect("alternatif/edit/$id_calon_penerima");
+        redirect("alternatif");
     }
     // Method untuk hapus calon penerima baru
     public function delete()

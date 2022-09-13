@@ -32,12 +32,14 @@
                         <td class="d-flex flex-wrap justify-content-end">
                             <a class='btn btn-info mr-2' href="<?php echo base_url("info/$bs->id_bansos"); ?>">Info</a>
 
-                            <a href='<?= base_url("bansos/edit/$bs->id_bansos") ?>' class='btn btn-warning mr-2'>Ubah</a>
-                            <form action="<?php echo base_url("bansos"); ?>" method="post" class="d-inline-block confirm-delete">
-                                <input type="hidden" name="_method" value="delete">
-                                <input type="hidden" name="id_bansos" value="<?= $bs->id_bansos ?>">
-                                <button type="submit" class='btn btn-danger'>Hapus</button>
-                            </form>
+                            <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
+                                <a href='<?= base_url("bansos/edit/$bs->id_bansos") ?>' class='btn btn-warning mr-2'>Ubah</a>
+                                <form action="<?php echo base_url("bansos"); ?>" method="post" class="d-inline-block confirm-delete">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <input type="hidden" name="id_bansos" value="<?= $bs->id_bansos ?>">
+                                    <button type="submit" class='btn btn-danger'>Hapus</button>
+                                </form>
+                            <?php endif ?>
                         </td>
                     </tr>
                 <?php endforeach ?>

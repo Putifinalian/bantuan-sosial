@@ -35,7 +35,6 @@
                     <span>Bansos</span>
                 </a>
             </li>
-            
             <?php if($this->session->userdata('tipe_user') == "admin") : ?>
             <li class="<?php echo $this->uri->segment(1)=="kriteria"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('kriteria/view_criteria');?>">  
@@ -43,18 +42,14 @@
                     <span>Kriteria</span>
                 </a>
             </li>
-            <?php else : ?>
-
-            <?php endif ?>
             
-            <?php if($this->session->userdata('tipe_user') == "admin") : ?>
+           
             <li class="<?php echo $this->uri->segment(1)=="alternatif"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('alternatif');?>">
                     <i class="fa fa-book"></i> 
                     <span>Data Calon Penerima</span>
                 </a>
             </li>
-            <?php endif?>
 
             <li class="<?php echo $this->uri->segment(1)=="edas"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('edas');?>">
@@ -62,6 +57,7 @@
                     <span>Metode EDAS</span>
                 </a>
             </li>
+            <?php endif?>
 
             <li class="<?php echo $this->uri->segment(1)=="rank"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('rank');?>">
@@ -69,20 +65,6 @@
                     <span>Penerima Bantuan Sosial</span>
                 </a>
             </li>
-
-            <!-- <li class="<?php echo $this->uri->segment(1)=="ahp"?"active":"";?> has-sub">
-                <a href="<?php echo base_url('ahp');?>">
-                    <i class="fa fa-calculator" aria-hidden="true"></i> 
-                    <span>Hitung AHP</span>
-                </a>
-            </li> -->
-
-            <!-- <li class="<?php echo $this->uri->segment(1)=="ahp_bobot"?"active":"";?> has-sub">
-                <a href="<?php echo base_url('ahp_bobot');?>">
-                    <i class="fa fa-check-square" aria-hidden="true"></i> 
-                    <span>Memeriksa Konsistensi Hierarki</span>
-                </a>
-            </li> -->
 
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
         </ul>

@@ -36,9 +36,18 @@ function dom_kriteria($val, $bobot_matriks)
 
     <div class="container">
         <h1 class="text-center">Tabel Data Kriteria Bansos</h1>
-        <p class="text-center">Anda dapat mengelola data kriteria bansos</p>
-        <div class="form-group text-right">
-            <button type="button" data-toggle="modal" data-target="#tambah-data" class="btn btn-primary">Tambah</button>
+        <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
+            <p class="text-center">Anda dapat mengelola data kriteria bansos</p>
+                <div class="container p-3 my-3 bg-light">
+                    <h6>Note:</h6>
+                    <ol>
+                        <li><i>Benefit Criteria</i> adalah kriteria yang jika nilainya semakin besar semakin baik</li>
+                        <li><i>Cost Criteria</i> ialah kriteria yang jika nilainya semakin kecil semakin baik</li>
+                    </ol>
+                    </div>
+                <div class="form-group text-right">
+                <button type="button" data-toggle="modal" data-target="#tambah-data" class="btn btn-primary">Tambah</button>
+            <?php endif ?>
         </div>
         <?= $this->session->flashdata('notif') ?>
         <?php $this->session->set_flashdata("notif", "") ?>
@@ -60,6 +69,7 @@ function dom_kriteria($val, $bobot_matriks)
                         <td><?= $result->id_kriteria ?></td>
                         <td><?= $result->nama_kriteria ?></td>
                         <td><?= $result->tipe_kriteria ?></td>
+                        <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
                         <td class="d-flex flex-wrap justify-content-end">
                             <a class='btn btn-warning mr-2' href="<?= base_url("kriteria/edit/$result->id_kriteria") ?>"> Ubah</a>
                             <form action="<?= base_url("kriteria"); ?>" method="post" class="d-inline-block confirm-delete">
@@ -68,6 +78,7 @@ function dom_kriteria($val, $bobot_matriks)
                                 <button type="submit" class='btn btn-danger'>Hapus</button>
                             </form>
                         </td>
+                        <?php endif ?>
                     </tr>
                 <?php endforeach ?>
 

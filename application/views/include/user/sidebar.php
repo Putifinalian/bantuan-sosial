@@ -34,7 +34,7 @@
                     <span>Bansos</span>
                 </a>
             </li>
-            <li class="has-sub">
+            <!-- <li class="has-sub">
                 <a href="javascript:;">
                     <b class="caret"></b>
                     <i class="fas fa-list-ul"></i>
@@ -45,7 +45,7 @@
                         <li class=""><a href="<?php echo base_url('kriteria/view_criteria'); ?>">Tambah Kriteria</a></li>       
                     </li>
                 </ul>
-            </li>
+            </li> -->
 
             <li class="<?php echo $this->uri->segment(1)=="rank"?"active":"";?> has-sub">
                 <a href="<?php echo base_url('rank');?>">

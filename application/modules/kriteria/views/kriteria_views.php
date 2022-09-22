@@ -44,7 +44,7 @@ function dom_kriteria($val, $bobot_matriks)
                         <li><i>Benefit Criteria</i> adalah kriteria yang jika nilainya semakin besar semakin baik</li>
                         <li><i>Cost Criteria</i> ialah kriteria yang jika nilainya semakin kecil semakin baik</li>
                     </ol>
-                    </div>
+                </div>
                 <div class="form-group text-right">
                 <button type="button" data-toggle="modal" data-target="#tambah-data" class="btn btn-primary">Tambah</button>
             <?php endif ?>

@@ -13,7 +13,7 @@
                 <ul class="nav nav-pills" id="pills-tab" role="tablist" data-content="#pills-tabContent">
                     <li class="nav-item">
                         <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">
-                            Matrik Perbandingan Kriteria
+                            Matriks Perbandingan Kriteria
                         </a>
                     </li>
                     <li class="nav-item">
@@ -28,7 +28,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="pills-4-tab" data-bs-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">
-                            Check Consistency
+                            <i>Check Consistency</i>
                         </a>
                     </li>
                 </ul>

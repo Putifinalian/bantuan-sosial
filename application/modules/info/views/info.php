@@ -68,6 +68,16 @@
             <?php endforeach ?>
         </tbody>
     </table>
+
+    <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
+    <div class="container p-3 my-3 bg-light">
+    <h6>Note:</h6>
+        <ol>
+            <li>Lakukan perhitungan bobot jika nilai bobot masih kosong</li>
+            <li>Setelah nilai bobot terisi, silahkan ke menu Data Calon Penerima untuk melakukan Cek Penerima dengan Algoritma yang diinginkan</li>
+        </ol>
+    </div>
+    <?php endif ?>
 </div>
 
 <script>

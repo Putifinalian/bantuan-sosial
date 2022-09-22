@@ -27,14 +27,14 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" id="pills-6-tab" data-bs-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false">
-                Skor Penilaian (AS)
+                Skor Penilaian (AS) dan Perangkingan
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" id="pills-7-tab" data-bs-toggle="pill" href="#pills-7" role="tab" aria-controls="pills-7" aria-selected="false">
                 Perankingan
             </a>
-        </li>
+        </li> -->
     </ul>
 
     <div class="tab-content" id="pills-tabContent">

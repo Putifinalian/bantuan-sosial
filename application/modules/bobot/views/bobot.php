@@ -2,9 +2,17 @@
     <ol class="breadcrumb float-xl-right">
         <li class="breadcrumb-item"><a href="<?php echo base_url('home'); ?>">Dashboard</a></li>
     </ol>
-    <h1 class="page-header mb-3">Tabel Pembobotan Kriteria</h1>
+    <h1 class="text-center p-4 my-4">Tabel Perbandingan Kriteria</h1>
 
-
+    <div class="container p-3 my-3 bg-light">
+    <h5>Petunjuk Pengisian: </h5>
+        <ol>
+            <li>Perbandingan antar kriteria yang sama harus bernilai 1.</li>
+            <li>Perbandingan antar kriteria yang berbeda bernilai dari skala 1-9 sesuai kepentingan.</li>
+            <li>Contoh nilai kriteria yang berbeda, perbandingan nilai kriteria C0001 (kiri) dengan kriteria C0003 (kanan) adalah 3. Nilai dari kriteria C0003 dengan kriteria C0001 akan dinput otomatis dengan nilai kebalikan, yaitu 1/3 (0.33)</li>
+            <li>Setelah nilai perbandingan kriteria diisi, lakulan pengecekan bobot konsistensi untuk mendapatkan hasil konsistensi yang tinggi (nilai CR <= 0.1)</li>
+        </ol>
+    </div>
 
     <!-- <div class="bd-callout bd-callout-info">
         <p class="font-weight-bold h5">Catatan :</p>

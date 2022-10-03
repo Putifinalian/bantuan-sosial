@@ -2,7 +2,7 @@
     <ol class="breadcrumb float-xl-right">
         <li class="breadcrumb-item"><a href="<?php echo base_url('home'); ?>">Dashboard</a></li>
     </ol>
-    <h2 class="page-header mb-3">Daftar Penerima Bansos</h2>
+    <h1  class="text-center" class="page-header mb-3">Daftar Penerima Bansos</h1>
     <br>
 
     <style>

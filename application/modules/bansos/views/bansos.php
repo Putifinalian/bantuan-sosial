@@ -5,10 +5,18 @@
 
     <div class="container">
         <h1 class="text-center">Tabel Data Bansos</h1>
+        <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
         <p class="text-center">Anda dapat mengelola data bansos</p>
+        <?php endif ?>
+            <div class="container p-3 my-3 bg-light">
+                    <h6>Note:</h6>
+                    <p>Klik Info untuk melihat kriteria bantuan sosial</p>
+            </div>
         <div class="form-group text-right">
+
+            <?php if ($this->session->userdata('tipe_user') == "admin") : ?>
             <button data-toggle="modal" data-target="#tambah-data" class="btn btn-primary">Tambah</button>
-            <!-- <a class="btn btn-info" href="<?php echo base_url('Info'); ?>">Info</a> -->
+             <?php endif ?>
 
         </div>
         <?= $this->session->flashdata('notif') ?>

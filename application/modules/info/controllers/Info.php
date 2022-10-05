@@ -1,4 +1,5 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Info extends CI_Controller
 {
@@ -7,6 +8,7 @@ class Info extends CI_Controller
         parent::__construct();
         $this->load->model('InfoModel');
         $this->load->model('kriteria_bansos');
+        middleware_check_user($this);
     }
 
     public function index($id_bansos)

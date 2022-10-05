@@ -1,7 +1,15 @@
 <?php
+// require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 require_once realpath(__DIR__ . '/../../../helpers/create_id.php');
 class User_model extends CI_Model
 {
+
+    public function __construct()
+    {
+        if($this->session->userdata("is_login")){
+            redirect('/home', 'refresh');
+        }
+    }
 
     function login_user($username,$password)
     {

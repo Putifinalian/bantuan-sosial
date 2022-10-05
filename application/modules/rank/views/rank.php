@@ -2,7 +2,7 @@
     <ol class="breadcrumb float-xl-right">
         <li class="breadcrumb-item"><a href="<?php echo base_url('home'); ?>">Dashboard</a></li>
     </ol>
-    <h1  class="text-center" class="page-header mb-3">Daftar Penerima Bansos</h1>
+    <h1 class="text-center" class="page-header mb-3">Daftar Penerima Bansos</h1>
     <br>
 
     <style>
@@ -58,6 +58,10 @@
             })
             $('#table_penerima').DataTable({
                 data: data_penerima_bansoss,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
                 initComplete: function() {
                     this.api()
                         .columns()

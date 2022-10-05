@@ -1,4 +1,5 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Alternatif extends CI_Controller
 {
@@ -7,6 +8,7 @@ class Alternatif extends CI_Controller
         parent::__construct();
 
         $this->load->model('alternatif_model');
+        middleware_check_user($this);
     }
 
     public function index()

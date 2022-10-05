@@ -1,4 +1,5 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Kriteria extends CI_Controller
 {
@@ -8,6 +9,7 @@ class Kriteria extends CI_Controller
         parent::__construct();
         $this->load->model('Kriteria_model');
         $this->load->library('form_validation');
+        middleware_check_user($this);
     }
 
     public function index()

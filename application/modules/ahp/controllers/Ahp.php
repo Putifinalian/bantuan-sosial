@@ -1,10 +1,12 @@
 <?php defined("BASEPATH") OR exit("No direct script access allowed");
-
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 class Ahp extends CI_Controller 
 {
     public function __construct() {
 		parent::__construct();
 		$this->load->model('ahp_model');
+
+        middleware_check_user($this);
     }
 
   

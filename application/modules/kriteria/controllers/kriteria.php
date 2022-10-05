@@ -7,7 +7,7 @@ class Kriteria extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Kriteria_model');
+        // $this->load->model('Kriteria_model');
         // $this->load->library('form_validation');
         middleware_check_user($this);
     }
@@ -80,25 +80,28 @@ class Kriteria extends CI_Controller
 
     public function index()
     {
-        $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();
-        $data['kriteria'] = $kriteria;
+        return $this->json([
+            "status" => "ok"
+        ]);
+        // $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();
+        // $data['kriteria'] = $kriteria;
 
-        // return $this->json($kriteria);
+        // // return $this->json($kriteria);
 
-        $bansoss = $this->db->query("SELECT * FROM bansos")->result_object();
-        $data['bansoss'] = $bansoss;
+        // $bansoss = $this->db->query("SELECT * FROM bansos")->result_object();
+        // $data['bansoss'] = $bansoss;
 
-        $kategori_bansoss = $this->db->query("SELECT * FROM kategori_bansos")->result_object();
-        $data['kategori_bansoss'] = $kategori_bansoss;
+        // $kategori_bansoss = $this->db->query("SELECT * FROM kategori_bansos")->result_object();
+        // $data['kategori_bansoss'] = $kategori_bansoss;
 
-        // var_dump($data['kriteria']);exit;
-        $this->load->view("include/head");
-        $this->load->view("include/top-header");
-        $this->load->view('kriteria_views', $data);
-        $this->load->view("include/admin/sidebar");
-        $this->load->view("include/panel");
-        $this->load->view("include/alert");
-        $this->load->view("include/footer");
+        // // var_dump($data['kriteria']);exit;
+        // $this->load->view("include/head");
+        // $this->load->view("include/top-header");
+        // $this->load->view('kriteria_views', $data);
+        // $this->load->view("include/admin/sidebar");
+        // $this->load->view("include/panel");
+        // $this->load->view("include/alert");
+        // $this->load->view("include/footer");
     }
     public function view_criteria()
     {

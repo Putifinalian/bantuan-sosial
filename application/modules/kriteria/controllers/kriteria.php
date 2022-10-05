@@ -3,7 +3,6 @@ require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Kriteria extends CI_Controller
 {
-
     public function __construct()
     {
         parent::__construct();
@@ -47,8 +46,6 @@ class Kriteria extends CI_Controller
 
         $this->session->set_flashdata('notif', '<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect("kriteria/edit/$id_kriteria");
-
-
     }
 
     public function delete()

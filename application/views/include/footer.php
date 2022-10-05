@@ -34,26 +34,25 @@
 
 
 
-		<script src="<?php echo base_url('assets/plugins/pdfmake/build/pdfmake.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/pdfmake/build/vfs_fonts.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jszip/dist/jszip.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/table-manage-buttons.demo.js'); ?>"></script>
+		<!-- <script src="<?php echo base_url('assets/plugins/pdfmake/build/pdfmake.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/pdfmake/build/vfs_fonts.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jszip/dist/jszip.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/table-manage-buttons.demo.js'); ?>"></script> -->
 
 		<!-- v1 -->
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.time.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.resize.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.pie.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/dashboard.js'); ?>"></script>
-		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.time.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.resize.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.pie.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/dashboard.js'); ?>"></script> -->
 
 		<!-- icons  -->
-		<script src="<?php echo base_url('assets/plugins/highlight.js/highlight.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/render.highlight.js'); ?>"></script>
+		<!-- <script src="<?php echo base_url('assets/plugins/highlight.js/highlight.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/render.highlight.js'); ?>"></script> -->
 
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script>

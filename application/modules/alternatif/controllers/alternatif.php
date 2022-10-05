@@ -13,19 +13,19 @@ class Alternatif extends CI_Controller
 
     public function index()
     {
-        if ($this->input->method() == "post") {
-            $_method = $this->input->post('_method');
-            if ($_method == "put" || $_method == "patch") {
-                // jalankan fungsi update data
-                return $this->update();
-            } else if ($_method == "delete") {
-                // jalankan fungsi delete data
-                return $this->delete();
-            } else {
-                // jalankan fungsi insert data
-                return $this->store();
-            }
-        }
+        // if ($this->input->method() == "post") {
+        //     $_method = $this->input->post('_method');
+        //     if ($_method == "put" || $_method == "patch") {
+        //         // jalankan fungsi update data
+        //         return $this->update();
+        //     } else if ($_method == "delete") {
+        //         // jalankan fungsi delete data
+        //         return $this->delete();
+        //     } else {
+        //         // jalankan fungsi insert data
+        //         return $this->store();
+        //     }
+        // }
 
         return $this->lists();
     }

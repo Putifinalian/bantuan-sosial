@@ -80,6 +80,13 @@ class Alternatif extends CI_Controller
         redirect('alternatif');
     }
 
+    public function test()
+    {
+        return $this->json([
+            "success" => true,
+        ]);
+    }
+
     public function lists()
     {
         $alternatif = $this->alternatif_model->all();

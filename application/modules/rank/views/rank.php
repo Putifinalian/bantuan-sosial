@@ -13,28 +13,20 @@
             color: white;
         }
     </style>
+    <div>
+        <?php $this->load->view("filter"); ?>
+    </div>
     <div class="table-responsive">
         <table class="table table-hover table-bordered cell-border" id="table_penerima" class="display" style="width:100%">
             <thead>
                 <tr class="table-filter-input">
-                    <th rowspan="2" class="align-middle text-center" data-label="Nomor">Nomor</th>
-                    <th rowspan="2" class="align-middle text-center" data-label="Nama">Nama</th>
-                    <th rowspan="2" class="align-middle text-center" data-label="ID">ID</th>
+                    <th class="align-middle text-center" data-label="Nomor">Nomor</th>
+                    <th class="align-middle text-center" data-label="Nama">Nama</th>
+                    <th class="align-middle text-center" data-label="ID">ID</th>
                     <th class="align-middle text-center" data-label="Bansos">Bansos</th>
                     <th class="align-middle text-center" data-label="Kategori Bansos">Kategori Bansos</th>
                     <th class="align-middle text-center" data-label="Kriteria">Kriteria</th>
-                    <th rowspan="2" class="align-middle text-center" data-label="Data">Data</th>
-                </tr>
-                <tr>
-                    <th class="align-middle text-center">
-                        Bansos
-                    </th>
-                    <th class="align-middle text-center">
-                        Kategori Bansos
-                    </th>
-                    <th class="align-middle text-center">
-                        Kriteria
-                    </th>
+                    <th class="align-middle text-center" data-label="Data">Data</th>
                 </tr>
             </thead>
         </table>
@@ -76,12 +68,20 @@
                             })
 
                             if (used_headers.includes(headers[val])) {
-                                let select = $('<select><option value=""></option></select>')
-                                    .appendTo($(`#table_penerima .table-filter-input th[data-label="${headers[val]}"]`).empty())
+                                let slug = headers[val].toLocaleLowerCase().split(" ").join("-")
+                                console.log("slug", slug);
+                                let select = $('<select class="form-control"><option value=""></option></select>')
+                                    .appendTo($(`.wrapper-filter-${slug}`).empty())
                                     .on('change', function() {
                                         let val = $.fn.dataTable.util.escapeRegex($(this).val());
                                         column.search(val ? val : "", true, false).draw();
                                     });
+                                // let select = $('<select><option value=""></option></select>')
+                                //     .appendTo($(`#table_penerima .table-filter-input th[data-label="${headers[val]}"]`).empty())
+                                //     .on('change', function() {
+                                //         let val = $.fn.dataTable.util.escapeRegex($(this).val());
+                                //         column.search(val ? val : "", true, false).draw();
+                                //     });
 
                                 column = column.data()
                                 column = column.unique()

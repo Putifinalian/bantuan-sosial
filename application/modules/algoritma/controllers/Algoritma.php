@@ -5,7 +5,7 @@ class Algoritma extends CI_Controller
 {
     public function __construct() {
 		parent::__construct();
-		// $this->load->model('AlgoritmaModel');
+		$this->load->model('AlgoritmaModel');
         middleware_check_user($this);
     }
 

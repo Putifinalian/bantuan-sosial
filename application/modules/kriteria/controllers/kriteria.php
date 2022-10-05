@@ -3,29 +3,30 @@ require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Kriteria extends CI_Controller
 {
-    public function __construct()
+
+    function __construct()
     {
         parent::__construct();
-        // $this->load->model('Kriteria_model');
-        // $this->load->library('form_validation');
+        $this->load->model('Kriteria_model');
+        $this->load->library('form_validation');
         middleware_check_user($this);
     }
 
-    // public function index()
-    // {
-    //     if ($this->input->method() == "post") {
-    //         $_method = $this->input->post('_method');
-    //         if ($_method == "put" || $_method == "patch") {
-    //             return $this->update();
-    //         } else if ($_method == "delete") {
-    //             return $this->delete();
-    //         } else {
-    //             return $this->store();
-    //         }
-    //     }
+    public function index()
+    {
+        if ($this->input->method() == "post") {
+            $_method = $this->input->post('_method');
+            if ($_method == "put" || $_method == "patch") {
+                return $this->update();
+            } else if ($_method == "delete") {
+                return $this->delete();
+            } else {
+                return $this->store();
+            }
+        }
 
-    //     return $this->view_criteria();
-    // }
+        return $this->view_criteria();
+    }
 
     public function update()
     {
@@ -46,6 +47,8 @@ class Kriteria extends CI_Controller
 
         $this->session->set_flashdata('notif', '<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect("kriteria/edit/$id_kriteria");
+
+
     }
 
     public function delete()
@@ -75,31 +78,6 @@ class Kriteria extends CI_Controller
         redirect('kriteria/view_criteria');
     }
 
-    public function index()
-    {
-        return $this->json([
-            "status" => "ok"
-        ]);
-        // $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();
-        // $data['kriteria'] = $kriteria;
-
-        // // return $this->json($kriteria);
-
-        // $bansoss = $this->db->query("SELECT * FROM bansos")->result_object();
-        // $data['bansoss'] = $bansoss;
-
-        // $kategori_bansoss = $this->db->query("SELECT * FROM kategori_bansos")->result_object();
-        // $data['kategori_bansoss'] = $kategori_bansoss;
-
-        // // var_dump($data['kriteria']);exit;
-        // $this->load->view("include/head");
-        // $this->load->view("include/top-header");
-        // $this->load->view('kriteria_views', $data);
-        // $this->load->view("include/admin/sidebar");
-        // $this->load->view("include/panel");
-        // $this->load->view("include/alert");
-        // $this->load->view("include/footer");
-    }
     public function view_criteria()
     {
         $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();

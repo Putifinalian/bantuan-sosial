@@ -7,7 +7,7 @@ class Alternatif extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('alternatif_model');
+        // $this->load->model('alternatif_model');
         middleware_check_user($this);
     }
 
@@ -89,7 +89,21 @@ class Alternatif extends CI_Controller
 
     public function lists()
     {
-        $alternatif = $this->alternatif_model->all();
+        // $alternatif = $this->alternatif_model->all();
+        $sql = "SELECT * FROM alternatif AS a, data_penerima_bansos AS b WHERE a.id_calon_penerima=b.id_calon_penerima";
+        $filter_id_bansos = $this->input->get("filter_id_bansos");
+        $filter_id_kategori_bansos = $this->input->get("filter_id_kategori_bansos");
+
+        if ($filter_id_bansos && $filter_id_bansos != "") {
+            $sql .= " AND b.id_bansos='$filter_id_bansos'";
+        }
+        if ($filter_id_bansos && $filter_id_bansos != "") {
+            $sql .= " AND b.id_kategori_bansos='$filter_id_kategori_bansos'";
+        }
+
+        $alternatif = $this->db->query($sql);
+        $alternatif = $alternatif->result_object();
+
         $data['alternatif'] = $alternatif;
 
         $kriterias = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria")->result();

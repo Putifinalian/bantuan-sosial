@@ -12,21 +12,21 @@ class Kriteria extends CI_Controller
         middleware_check_user($this);
     }
 
-    public function index()
-    {
-        if ($this->input->method() == "post") {
-            $_method = $this->input->post('_method');
-            if ($_method == "put" || $_method == "patch") {
-                return $this->update();
-            } else if ($_method == "delete") {
-                return $this->delete();
-            } else {
-                return $this->store();
-            }
-        }
+    // public function index()
+    // {
+    //     if ($this->input->method() == "post") {
+    //         $_method = $this->input->post('_method');
+    //         if ($_method == "put" || $_method == "patch") {
+    //             return $this->update();
+    //         } else if ($_method == "delete") {
+    //             return $this->delete();
+    //         } else {
+    //             return $this->store();
+    //         }
+    //     }
 
-        return $this->view_criteria();
-    }
+    //     return $this->view_criteria();
+    // }
 
     public function update()
     {

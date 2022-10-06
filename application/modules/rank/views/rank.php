@@ -21,6 +21,7 @@
             <thead>
                 <tr class="table-filter-input">
                     <th class="align-middle text-center" data-label="Nomor">Nomor</th>
+                    <th class="align-middle text-center" data-label="Nomor">Rank</th>
                     <th class="align-middle text-center" data-label="Nama">Nama</th>
                     <th class="align-middle text-center" data-label="ID">ID</th>
                     <th class="align-middle text-center" data-label="Bansos">Bansos</th>
@@ -40,6 +41,7 @@
             data_penerima_bansoss = data_penerima_bansoss.map((dpb, index) => {
                 return [
                     index + 1,
+                    dpb.rank,
                     dpb.id_calon_penerima,
                     dpb.nama_calon_penerima,
                     dpb.nama_bansos,
@@ -48,12 +50,130 @@
                     dpb.data,
                 ]
             })
+
             $('#table_penerima').DataTable({
                 data: data_penerima_bansoss,
                 dom: 'Bfrtip',
+                // "dom": '<"dt-buttons"Bf><"clear">lirt',
                 buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
+                    "colvis", 'copy', 'csv', 'excel', 'pdf', 'print'
                 ],
+
+                // "paging": true,
+                // "autoWidth": true,
+                // "buttons": [{
+                //     text: 'Custom PDF',
+                //     extend: 'pdfHtml5',
+                //     filename: 'Report Data Penerima',
+                //     orientation: 'landscape', //portrait
+                //     pageSize: 'A4', //A3 , A5 , A6 , legal , letter
+                //     exportOptions: {
+                //         columns: ':visible',
+                //         search: 'applied',
+                //         order: 'applied'
+                //     },
+                //     customize: function(doc) {
+                //         //Remove the title created by datatTables
+                //         doc.content.splice(0, 1);
+                //         //Create a date string that we use in the footer. Format is dd-mm-yyyy
+                //         var now = new Date();
+                //         var jsDate = now.getDate() + '-' + (now.getMonth() + 1) + '-' + now.getFullYear();
+                //         // Logo converted to base64
+                //         // var logo = getBase64FromImageUrl('https://datatables.net/media/images/logo.png');
+                //         // The above call should work, but not when called from codepen.io
+                //         // So we use a online converter and paste the string in.
+                //         // Done on http://codebeautify.org/image-to-base64-converter
+                //         // It's a LONG string scroll down to see the rest of the code !!!
+                //         let logo = '';
+                //         // A documentation reference can be found at
+                //         // https://github.com/bpampuch/pdfmake#getting-started
+                //         // Set page margins [left,top,right,bottom] or [horizontal,vertical]
+                //         // or one number for equal spread
+                //         // It's important to create enough space at the top for a header !!!
+                //         doc.pageMargins = [20, 60, 20, 30];
+                //         // Set the font size fot the entire document
+                //         doc.defaultStyle.fontSize = 7;
+                //         // Set the fontsize for the table header
+                //         doc.styles.tableHeader.fontSize = 7;
+                //         // Create a header object with 3 columns
+                //         // Left side: Logo
+                //         // Middle: brandname
+                //         // Right side: A document title
+
+                //         // doc['header'] = (function() {
+                //         //     return {
+                //         //         columns: [{
+                //         //                 image: logo,
+                //         //                 width: 24
+                //         //             },
+                //         //             {
+                //         //                 alignment: 'left',
+                //         //                 italics: true,
+                //         //                 text: 'dataTables',
+                //         //                 fontSize: 18,
+                //         //                 margin: [10, 0]
+                //         //             },
+                //         //             {
+                //         //                 alignment: 'right',
+                //         //                 fontSize: 14,
+                //         //                 text: 'Custom PDF export with dataTables'
+                //         //             }
+                //         //         ],
+                //         //         margin: 20
+                //         //     }
+                //         // });
+                //         // Create a footer object with 2 columns
+                //         // Left side: report creation date
+                //         // Right side: current page and total pages
+                //         doc['footer'] = (function(page, pages) {
+                //             return {
+                //                 columns: [{
+                //                         alignment: 'left',
+                //                         text: ['Created on: ', {
+                //                             text: jsDate.toString()
+                //                         }]
+                //                     },
+                //                     {
+                //                         alignment: 'right',
+                //                         text: ['page ', {
+                //                             text: page.toString()
+                //                         }, ' of ', {
+                //                             text: pages.toString()
+                //                         }]
+                //                     }
+                //                 ],
+                //                 margin: 20
+                //             }
+                //         });
+                //         // Change dataTable layout (Table styling)
+                //         // To use predefined layouts uncomment the line below and comment the custom lines below
+                //         // doc.content[0].layout = 'lightHorizontalLines'; // noBorders , headerLineOnly
+                //         var objLayout = {};
+                //         objLayout['hLineWidth'] = function(i) {
+                //             return .5;
+                //         };
+                //         objLayout['vLineWidth'] = function(i) {
+                //             return .5;
+                //         };
+                //         objLayout['hLineColor'] = function(i) {
+                //             return '#aaa';
+                //         };
+                //         objLayout['vLineColor'] = function(i) {
+                //             return '#aaa';
+                //         };
+                //         objLayout['paddingLeft'] = function(i) {
+                //             return 4;
+                //         };
+                //         objLayout['paddingRight'] = function(i) {
+                //             return 4;
+                //         };
+                //         doc.content[0].layout = objLayout;
+
+                //         console.log("doc.content", doc.content);
+                        
+                //     }
+                // }],
+
                 initComplete: function() {
                     this.api()
                         .columns()

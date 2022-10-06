@@ -26,6 +26,44 @@ class Edas extends CI_Controller
         $this->load->view("include/alert");
     }
 
+    public function update_data_penerima_bansos()
+    {
+        // $posts = [];
+        // foreach ($_POST as $key => $value) {
+        //     $posts[$key] = json_decode($this->input->post($key));
+        // }
+        // $this->json($posts);
+        $data_calon_penerimas = json_decode($this->input->post("data_calon_penerimas"));
+        // $this->json($this->input->post("data_calon_penerimas"));
+        $sql = "UPDATE `data_penerima_bansos` SET `rank` = (case";
+
+        foreach ($data_calon_penerimas as $dcp) {
+            // $id_alternatif = $dcp["id_alternatif"];
+            // $id_bansos = $dcp["id_bansos"];
+            // $rank = $dcp["rank"];
+
+            $id_alternatif = $dcp->id_alternatif;
+            $id_bansos = $dcp->id_bansos;
+            $rank = $dcp->rank;
+            $sql .= " when `id_calon_penerima`='$id_alternatif' AND `id_bansos`='$id_bansos' then $rank";
+        }
+
+        $sql .= " end)";
+        // WHERE ID in (1,2,3,4);";
+
+        // return $this->json(["sql" => $sql]);
+
+        $results = null;
+        try {
+            $results = $this->db->query($sql);
+        } catch (\Throwable $th) {
+            //throw $th;
+            $error = $this->db->error();
+            return $this->json(compact("error"));
+        }
+        return $this->json(compact("results"));
+    }
+
     public function index_edas($id_bansos)
     {
         $data['id_bansos'] = $id_bansos;

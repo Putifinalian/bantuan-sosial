@@ -13,11 +13,17 @@ class User extends CI_Controller
 
     public function index()
     {
+        if($this->session->userdata("is_login")){
+            redirect('/home', 'refresh');
+        }
         $this->load->view('index');
     }
 
     public function register()
     {
+        if($this->session->userdata("is_login")){
+            redirect('/home', 'refresh');
+        }
         if($this->input->method() == "get") {
             $this->load->view('register');
         } else{
@@ -55,7 +61,5 @@ class User extends CI_Controller
         $this->session->unset_userdata('is_login');
         redirect('user');
     }
-
-
 }
 ?>

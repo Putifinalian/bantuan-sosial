@@ -149,7 +149,17 @@
         //     }
         //     return data
         // })
-        
+
+
+        let data_calon_penerimas = skor_penilaian.map((data, index) => {
+            return {
+                id_alternatif: data.id_alternatif,
+                id_bansos: `<?= $id_bansos ?>`,
+                rank: data.sort_rank
+            }
+        })
+
+
         skor_penilaian = skor_penilaian.map(sp => {
             renderPils7(sp, skor_penilaian)
 
@@ -188,6 +198,38 @@
             data: skor_penilaian,
         });
         // END ============================
+
+
+        console.log("Perhitungan EDAS selesai");
+
+        data_calon_penerimas = data_calon_penerimas.sort((a, b) => b.rank - a.rank)
+        console.log("data_calon_penerimas", data_calon_penerimas);
+
+        update_data_penerima_bansos(data_calon_penerimas)
+        async function update_data_penerima_bansos(data_calon_penerimas) {
+            let body = Object.entries({
+                data_calon_penerimas
+            }).map(([k, v]) => {
+                return k + '=' + JSON.stringify(v)
+            }).join('&')
+
+            let result = await fetch(`<?= base_url("edas/update_data_penerima_bansos") ?>`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body
+            })
+
+            result = await result.text()
+            try {
+                result = JSON.parse(result)
+            } catch (error) {
+
+            }
+
+            console.log("result", result);
+        }
 
         // document.querySelector("#pills-6-tab").click()
     }, false);

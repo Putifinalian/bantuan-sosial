@@ -90,7 +90,7 @@
 
         let every_check_is_pass = check_is_pass.every(e => e == true)
         if (every_check_is_pass) {
-            window.location.href = `<?= base_url("edas") ?>/${el_select.value}`
+            window.location.href = `<?= base_url("edas") ?>/hitung/${el_select.value}`
         }else{
             
         }

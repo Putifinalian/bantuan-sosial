@@ -1,15 +1,17 @@
 <?php defined("BASEPATH") OR exit("No direct script access allowed");
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Algoritma extends CI_Controller 
 {
     public function __construct() {
 		parent::__construct();
 		$this->load->model('AlgoritmaModel');
+        middleware_check_user($this);
     }
 
   
     public function index(){
-      $algoritma = $this->AlgoritmaModel->getAll();
+      $algoritma = $this->db->query("SELECT * from algoritma")->result();
       $data['algoritma'] = $algoritma;
       
       $bansos_ = $this->db->query("SELECT * FROM bansos")->result_object();

@@ -1,4 +1,5 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
+require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
 class Alternatif extends CI_Controller
 {
@@ -7,6 +8,7 @@ class Alternatif extends CI_Controller
         parent::__construct();
 
         $this->load->model('alternatif_model');
+        middleware_check_user($this);
     }
 
     public function index()
@@ -76,6 +78,13 @@ class Alternatif extends CI_Controller
 
         $this->session->set_flashdata('notif', "<div class='alert alert-success' role='alert'> Data $id_calon_penerima Berhasil diubah <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
         redirect('alternatif');
+    }
+
+    public function test()
+    {
+        return $this->json([
+            "success" => true,
+        ]);
     }
 
     public function lists()

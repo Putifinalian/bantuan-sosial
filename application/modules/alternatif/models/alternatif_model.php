@@ -1,7 +1,7 @@
 <?php
 require_once realpath(__DIR__ . '/../../../helpers/create_id.php');
 
-class Alternatif_model extends CI_Model
+class alternatif_model extends CI_Model
 {
     public function all()
     {

@@ -20,30 +20,39 @@
 		<script src="<?php echo base_url('assets/js/theme/default.min.js'); ?>"></script>
 		<!-- ================== END BASE JS ================== -->
 		<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
         <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
         <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
-		<script src="<?php echo base_url('assets/plugins/pdfmake/build/pdfmake.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/pdfmake/build/vfs_fonts.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jszip/dist/jszip.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/table-manage-buttons.demo.js'); ?>"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+
+
+		<!-- <script src="<?php echo base_url('assets/plugins/pdfmake/build/pdfmake.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/pdfmake/build/vfs_fonts.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jszip/dist/jszip.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/table-manage-buttons.demo.js'); ?>"></script> -->
 
 		<!-- v1 -->
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.time.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.resize.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/flot/jquery.flot.pie.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/dashboard.js'); ?>"></script>
-		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.time.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.resize.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/flot/jquery.flot.pie.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/dashboard.js'); ?>"></script> -->
 
 		<!-- icons  -->
-		<script src="<?php echo base_url('assets/plugins/highlight.js/highlight.min.js'); ?>"></script>
-		<script src="<?php echo base_url('assets/js/demo/render.highlight.js'); ?>"></script>
+		<!-- <script src="<?php echo base_url('assets/plugins/highlight.js/highlight.min.js'); ?>"></script> -->
+		<!-- <script src="<?php echo base_url('assets/js/demo/render.highlight.js'); ?>"></script> -->
 
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script>

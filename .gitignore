@@ -1,5 +1,7 @@
 .DS_Store
 
+application/config/database.php
+
 application/cache/*
 !application/cache/index.html
 
@@ -7,6 +9,7 @@ application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
+not-used*
 
 composer.lock
 
@@ -16,7 +19,6 @@ user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
 /user_guide/*
-/system/*
 /database/*
 /assets/img/*
 /assets/plugins/*

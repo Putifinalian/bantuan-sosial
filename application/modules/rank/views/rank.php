@@ -50,6 +50,7 @@
                     dpb.data,
                 ]
             })
+            
 
             $('#table_penerima').DataTable({
                 data: data_penerima_bansoss,

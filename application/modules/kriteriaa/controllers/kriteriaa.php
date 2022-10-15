@@ -18,17 +18,17 @@ class kriteriaa extends CI_Controller
      */
     public function index()
     {
-        if ($this->input->method() == "post") {
-            $_method = $this->input->post('_method');
-            if ($_method == "put" || $_method == "patch") {
-                // return $this->update();
-            } else if ($_method == "delete") {
-                // return $this->delete();
-            } else {
+        // if ($this->input->method() == "post") {
+        //     $_method = $this->input->post('_method');
+        //     if ($_method == "put" || $_method == "patch") {
+        //         // return $this->update();
+        //     } else if ($_method == "delete") {
+        //         // return $this->delete();
+        //     } else {
 
-                // return $this->store();
-            }
-        }
+        //         // return $this->store();
+        //     }
+        // }
 
         return $this->view_criteria();
     }

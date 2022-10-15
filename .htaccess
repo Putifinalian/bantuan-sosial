@@ -7,7 +7,7 @@
     RewriteCond %{REQUEST_URI} ^application.*
     RewriteRule ^(.*)$ /index.php?/$1 [L]
 
-    RewriteCond %{REQUEST_URI} ^assets.*
+    RewriteCond %{REQUEST_URI} ^asset.*
     RewriteRule ^(.*)$ /index.php?/$1 [L]
 
     RewriteCond %{REQUEST_FILENAME} !-f

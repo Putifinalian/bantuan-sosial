@@ -27,7 +27,29 @@ class Kriteria extends CI_Controller
 
         return $this->view_criteria();
     }
+    public function view_criteria()
+    {
+        $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();
+        $data['kriteria'] = $kriteria;
 
+        // return $this->json($kriteria);
+
+        $bansoss = $this->db->query("SELECT * FROM bansos")->result_object();
+        $data['bansoss'] = $bansoss;
+
+        $kategori_bansoss = $this->db->query("SELECT * FROM kategori_bansos")->result_object();
+        $data['kategori_bansoss'] = $kategori_bansoss;
+
+        // var_dump($data['kriteria']);exit;
+        $this->load->view("include/head");
+        $this->load->view("include/top-header");
+        $this->load->view('kriteria_views', $data);
+        $this->load->view("include/admin/sidebar");
+        $this->load->view("include/panel");
+        $this->load->view("include/alert");
+        $this->load->view("include/footer");
+    }
+    
     public function update()
     {
         $id_kriteria = $this->input->post('id_kriteria');
@@ -76,29 +98,6 @@ class Kriteria extends CI_Controller
 
         $this->session->set_flashdata('notif', '<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect('kriteria/view_criteria');
-    }
-
-    public function view_criteria()
-    {
-        $kriteria = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria GROUP BY kriteria.id_kriteria ORDER BY kriteria.id_kriteria ASC")->result_object();
-        $data['kriteria'] = $kriteria;
-
-        // return $this->json($kriteria);
-
-        $bansoss = $this->db->query("SELECT * FROM bansos")->result_object();
-        $data['bansoss'] = $bansoss;
-
-        $kategori_bansoss = $this->db->query("SELECT * FROM kategori_bansos")->result_object();
-        $data['kategori_bansoss'] = $kategori_bansoss;
-
-        // var_dump($data['kriteria']);exit;
-        $this->load->view("include/head");
-        $this->load->view("include/top-header");
-        $this->load->view('kriteria_views', $data);
-        $this->load->view("include/admin/sidebar");
-        $this->load->view("include/panel");
-        $this->load->view("include/alert");
-        $this->load->view("include/footer");
     }
 
     public function edit($id_kriteria)

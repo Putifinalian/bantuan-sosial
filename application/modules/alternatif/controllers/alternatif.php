@@ -7,7 +7,7 @@ class Alternatif extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('alternatif_model');
+        $this->load->model('Alternatif_model');
         middleware_check_user($this);
     }
 

@@ -1,7 +1,7 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
 require_once realpath(__DIR__ . '/../../../helpers/middleware.php');
 
-class Kriteriaa extends CI_Controller
+class kriteriaa extends CI_Controller
 {
 
     function __construct()

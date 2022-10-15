@@ -18,6 +18,8 @@ class kriteriaa extends CI_Controller
      */
     public function index()
     {
+        echo "INDEX";
+        return ""; 
         // if ($this->input->method() == "post") {
         //     $_method = $this->input->post('_method');
         //     if ($_method == "put" || $_method == "patch") {
@@ -30,7 +32,7 @@ class kriteriaa extends CI_Controller
         //     }
         // }
 
-        return $this->view_criteria();
+        // return $this->view_criteria();
     }
 
     public function view_criteria()

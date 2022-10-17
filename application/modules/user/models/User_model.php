@@ -9,7 +9,7 @@ class User_model extends CI_Model
         
         if($query->num_rows() > 0) {
             $data_user = $query->row();
-            
+            $password = MD5($password);
             $this->db->where("username='$username'");
             $this->db->where("password='$password'");
             $result = $this->db->get('users')->result();

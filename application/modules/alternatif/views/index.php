@@ -12,7 +12,7 @@
                 Tambah
             </button>
 
-            <a class="btn btn-info" href="<?php echo base_url('Algoritma'); ?>">Cek Penerima Bansos</a>
+            <a class="btn btn-info" href="<?php echo base_url('algoritma'); ?>">Cek Penerima Bansos</a>
         </div>
 
         <div>

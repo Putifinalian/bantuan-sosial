@@ -7,7 +7,7 @@ class Info extends CI_Controller
     {
         parent::__construct();
         $this->load->model('InfoModel');
-        $this->load->model('kriteria_bansos');
+        $this->load->model('Kriteria_bansos');
         middleware_check_user($this);
     }
 
@@ -34,7 +34,7 @@ class Info extends CI_Controller
         $id_kriteria = $this->input->post('id_kriteria', true);
         $tipe_kriteria = $this->input->post('tipe_kriteria', true);
         // echo "tambah_bansos : $id_bansos - $id_kriteria";
-        $result = $this->kriteria_bansos->tambah_kriteria_bansos([
+        $result = $this->Kriteria_bansos->tambah_kriteria_bansos([
             "id_bansos" => $id_bansos,
             "id_kriteria" => $id_kriteria,
             "tipe_kriteria" => $tipe_kriteria,

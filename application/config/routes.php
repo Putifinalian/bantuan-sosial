@@ -58,8 +58,8 @@ $route['alternatif/edit/(:any)'] = 'alternatif/edit/$1';
 $route['bansos/edit/(:any)'] = 'bansos/edit/$1';
 $route['kriteria/edit/(:any)'] = 'kriteria/edit/$1';
 $route['info/(:any)'] = 'info/index/$1';
-$route['pembobotan/(:any)'] = 'Bobot/view_pembobotan/$1';
-$route['edas/hitung/(:any)'] = 'Edas/index_edas/$1';
+$route['pembobotan/(:any)'] = 'bobot/view_pembobotan/$1';
+$route['edas/hitung/(:any)'] = 'edas/index_edas/$1';
 
 // $route['d_pok/(:any)'] = 'd_pok/index/$1';
 // $route['d_sas/(:any)'] = 'd_sas/index/$1';

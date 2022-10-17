@@ -7,7 +7,7 @@ class Alternatif extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('alternatif_model');
+        $this->load->model('Alternatif_model');
         middleware_check_user($this);
     }
 
@@ -37,7 +37,7 @@ class Alternatif extends CI_Controller
         foreach ($_POST as $key => $value) {
             $post[$key] = $this->input->post($key);
         }
-        $result = $this->alternatif_model->store($post);
+        $result = $this->Alternatif_model->store($post);
         // return $this->json($result);
 
         $nama_calon_penerima = $post['nama_calon_penerima'];
@@ -56,7 +56,7 @@ class Alternatif extends CI_Controller
         $nama_calon_penerima = $post['nama_calon_penerima'];
         $id_calon_penerima = $post['id_calon_penerima'];
 
-        $result = $this->alternatif_model->update($post);
+        $result = $this->Alternatif_model->update($post);
         // return $this->json($result);
 
         $this->session->set_flashdata('notif', "<div class='alert alert-success' role='alert'> Data $nama_calon_penerima Berhasil diupdate <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
@@ -89,7 +89,7 @@ class Alternatif extends CI_Controller
 
     public function lists()
     {
-        $alternatif = $this->alternatif_model->all();
+        $alternatif = $this->Alternatif_model->all();
         $data['alternatif'] = $alternatif;
 
         $kriterias = $this->db->query("SELECT * from kriteria_bansos LEFT JOIN kriteria ON kriteria_bansos.id_kriteria = kriteria.id_kriteria")->result();

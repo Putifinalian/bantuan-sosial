@@ -1,7 +1,7 @@
 <?php
 require_once realpath(__DIR__ . '/../../../helpers/create_id.php');
 
-class kriteria_bansos extends CI_Model
+class Kriteria_bansos extends CI_Model
 {
     function tambah_kriteria_bansos($attributes)
     { 
